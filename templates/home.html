@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'imgs/icon.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <div class="top-container">
+      <div class="header">
+        <h1>Chess Game</h1>
+      </div>
+
+      <div class="container">
+        <div class="hw">
+          <p>ITE BAI501 F22 HW</p>
+          <p>وظيفة مادة الذكاء الصنعي</p>
+          <p>الدكتور: باسل الخطيب</p>
+          <p>الطالب: عمار حسن</p>
+          <p>ID: ammar_162154</p>
+        </div>
+        <div class="welcome">
+          <h2>Welcome to Chess Game!</h2>
+          <p>Please select your color and Bot Algorithm.</p>
+        </div>
+        <form method="post">
+          {% csrf_token %}
+          <div class="row">
+            <div class="color-selector">
+              <label for="color-white"
+                ><input
+                  type="radio"
+                  name="color"
+                  id="color-white"
+                  value="white"
+                  checked
+                /><span class="white"></span>White</label
+              >
+              <label for="color-black"
+                ><input
+                  type="radio"
+                  name="color"
+                  id="color-black"
+                  value="black"
+                /><span class="black"></span>Black</label
+              >
+            </div>
+            <div class="bot-selector">
+              <label for="bot-minmaxL"
+                ><input
+                  type="radio"
+                  name="bot"
+                  id="bot-minmaxL"
+                  value="minmaxL"
+                  checked
+                /><span class="minmaxL"></span>alpha_betaMinMaxL</label
+              >
+              <label for="bot-minmaxBest"
+                ><input
+                  type="radio"
+                  name="bot"
+                  id="bot-minmaxBest"
+                  value="minmaxBest"
+                /><span class="minmaxBest"></span>alpha_beta_MinMaxBest</label
+              >
+            </div>
+            <input
+              type="submit"
+              id="start-button"
+              name="startgame"
+              value="Start Game"
+              placeholder="Start Game"
+            />
+          </div>
+        </form>
+        <div class="hero-img">
+          <img src="{% static 'imgs/hero.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="header">
+        <h5>Developed by Ammar Hassan</h5>
+      </div>
+    </div>
+
+    <script src="{% static '../static/js/index.js' %}"></script>
+  </body>
+</html>

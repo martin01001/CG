@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/gameStyle.css' %}" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <!-- <div class="board-info">
+        <div class="hestory"></div>
+        <div class="dead-pieces"></div>
+      </div> -->
+      <div class="top-container">
+        <div class="board" id="board">
+          <div class="bottom_edge">
+            <div class="title-num">a</div>
+            <div class="title-num">b</div>
+            <div class="title-num">c</div>
+            <div class="title-num">d</div>
+            <div class="title-num">e</div>
+            <div class="title-num">f</div>
+            <div class="title-num">g</div>
+            <div class="title-num">h</div>
+          </div>
+          <div class="left-edge">
+            <div class="title-num">1</div>
+            <div class="title-num">2</div>
+            <div class="title-num">3</div>
+            <div class="title-num">4</div>
+            <div class="title-num">5</div>
+            <div class="title-num">6</div>
+            <div class="title-num">7</div>
+            <div class="title-num">8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-box hide">
+      <h1 class="result-title">Game Finish</h1>
+      <div class="result-row">
+        <span>White</span>
+        <span id="result-num"></span>
+        <span>Black</span>
+      </div>
+      <h1 class="title-winner">Winner</h1>
+      <h1 id="winner" class="winner-black"></h1>
+    </div>
+    <div class="overlay hide"></div>
+    <script src="{% static '../static/js/gameChess.js' %}"></script>
+  </body>
+</html>
